@@ -1,0 +1,512 @@
+/*  
+Theme Name: Side V2
+Theme URI: http://side.com
+Description: WordPress theme for Side UK
+Version: 2
+Author: Mark Duwe
+Author URI: http://www.prydonian.digital
+Tags: 
+License: Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
+*/
+@font-face {
+	font-family: 'side';
+	src:url('fonts/side.eot');
+}
+@font-face {
+	font-family: 'side';
+	src: url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAAf8AAsAAAAACtwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAABCAAABN0AAAY36sHiLEZGVE0AAAXoAAAAGgAAABxly52KR0RFRgAABgQAAAAdAAAAIAA0AARPUy8yAAAGJAAAAEsAAABgMY3d7mNtYXAAAAZwAAAAPQAAAVLgFvLNaGVhZAAABrAAAAAwAAAANv3hcBVoaGVhAAAG4AAAAB4AAAAkBRz/5GhtdHgAAAcAAAAAFAAAABQFwAB4bWF4cAAABxQAAAAGAAAABgAHUABuYW1lAAAHHAAAANMAAAFfyhoMKHBvc3QAAAfwAAAADAAAACAAAwAAeJw9VG1QVGUUPnddlnVdV9QF0VZYV4aBtBH8KhVSNBVNs6xxjCFUIgaRHAaJyExHKSWvSjNkgjiYIWaNP5giY7KAYYyMyIgQ/AjxI0QFP0CNRYKn52XV++O85973vOd9znOeczUxGkXTNK8NaxPeEs0gmkS4xxncrkFuf6NuHaRbjQEW8Y1fpeuPV6u3vq7H7r7v5ZC8YQ4RH4cUD3eI2WGaNELMKoNZhomfjJUgmSCTZMo769cuCAsL4zL/yRLuWSZ7limeZaoCMQBERNuhZWsfazs1Xdsl3iqrQaxSr0UPyjAWeWXadPd9Y5+9x+5tg2Fl0VlofomJvpChAWVAV9x0oHdECnC/eRLQ0ZoA9ZiBms1uYObBchPQ+UMcv6X/yKD4lxgU4wgAPgi+Cak2jqaXvx+Y0XsdyIoNZfi1yDSGJ8RAhhT/A7FFpgZCfl49lzkzfvXm+eYwnZeO+ZwBEwwEEnyDJn+/GZrU1tL0dXl54MnQQ7UQ38xG/QncqWabOx3ahZYIlpDgPAkczs1g0tIYB3CqdTVQwZtRUnAkkO+sFoXP2IBDV1+DrKnvQn9rZgNkXVsKtDE5cZC0+V9A4uwbgd2sUqJ6r3tDRloiIFafeIKfNgdiqbsWQO4SE5OgNR4s9wXuVB8F2pRp3/0ycLNsOXA9fglwu+c8RKKygYd11+j5f0rvVKn+2K6OGQts3/wQWHinEBhX38WPJ8rfpa3MGsmbFfs1ObEQlwI2OPUw0H85ml5+PndSdtGryiEdzxUcoZ3q8ybPvFgNCV3pA3Emb2HnflOkyoMq4K/YUCa68R5wt6jpBMRbUdO/bzc9BRvzPqNXfZSJhlgiaS0l4yBa5hl6jmMQQ2UWOTx5gNuuP4HGFUZIWG0tA2fumGhm5FYTyfJZRGH82/k1ZMTBcta5bw8hnT7H9LEhQMverezgV/+RpC/vQoIeVPF4aPt2Wr+gixCv3jaIXd1hWZ8PGV5/GzJLgTt+IxPyuikI+IPNkgSlvIc9fwN97dsh5oZ+VqIuHfzsEuYanNlAO7fEBZnOZnrM3LLlOmG6KrdxL1DV3qlY8rMuZrey7JCnNnUQQVI6ZPSFICJQh0a96qbYqBR0G6zA1dPnqdgzwhOvdLDnVAY6bSsg/mklZEghGDUvD2LKqGGd30wklEM1ZqrlDepVK/bLpkyd4SGQsmNszUADzi27BLQyFKvGFFJyvEtCZqyEjHfVA7+wx7i4lF4F68ZFNaAV3XXAZXWscdpsqq8thXq5011He6/4CuTpy4uAWxxDWUzW0NHHjEuT0qgCJ6Whq4wlSg93eQu+Sy1iCWqaCtX0ZrOhiqVRCtqlkwe8dJIVFrUTEly5jd3lFKAjN4Oefy49ViGRSRsAP/v7bNzGK0BD6xo2rv0j4HxQMyR8WQvwu2rrdCWi8ccXPGrHgPft6bOQA8lbHrNSOoNkyRzeYjCtz/OFZi04AjlX9QkQHJmK/nsJsRzk0vBgE+RK5YdAtDr2fZMFGDt7U4A+sEeOy1rXEPfeC+OBZCLjQ4EsdNWR9NKonTycY3ke2GWeDNmgJi/1QVUAJLqoCdiztIEJQhRVTn0eJav+dE0tEY9MS/pPNJtuqddZNG1ve0LEqQY2hL8gj3HqLzwyIf65gbYeu1331a2W/wEORVFiAAAAeJxjYGBgZACCk535hiD6nKK4DowGADadBFgAAHicY2BkYGDgA2IJBhBgYmAEQjYgZgHzGAAEjAA5AAAAeJxjYGZqYJzAwMrAwbiA8QADA0MkhGY0ZpBnWMrAwMTAyswABwIIJkNAmmsKg8MDhg8MTAn/HzBYMSUwKDQANcIVKAAhIwBvBQyBAHicY2BgYGaAYBkGRgYQ8AHyGMF8FgYDIM0BhEwgiQcsHxj+/wezGCAsBSYBRqguMGBkY0DmjkgAAM3yCLIAAAB4nGNgZGBgAOJ3ex7ciee3+crAzdQAFGE4pyiug6D/P2BqYEoAcjkYmECiAFCmCsZ4nGNgZGBgSvj/gMGKqYGB4W8DkASKoABmAIA1BQIAAAKAAAAAAAAAAoAAHwCgABkAIABAAABQAAAHAAB4nF2OvW7CMBRGTyBAWyq6seKNKVFiFsTAyAN0YI+EFUVCieTAMzCz9DH6AJ37YP0c3AVb1/fcz/cPeOeLhHASUt4ij5ixijwW1ZFT3XvkCXO+I0+l/yozSV+lvAxVgUcs+Ig8Zs86cqqcW+QJS+3w4Kn0H3oaTjjom5PeT2HNlTMVXqGrr+dKcKCj5TJ4rwyHwZJTyO9k/20ekSVjK7P6L9movGsvh87Xzti8MDsThsnZbJvZolTC0xpHoR/EMNaoSRjF0fm+6VpT5sVzyR8MbC32AHicY2BmwAsAAH0ABA==) format('woff'),
+		 url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'side';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="side-"] {
+*/
+.side-house, .side-facebook, .side-twitter, .side-vimeo, .side-rss {
+	font-family: 'side';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.side-house:before {
+	content: "\e000";
+}
+.side-facebook:before {
+	content: "\e001";
+}
+.side-twitter:before {
+	content: "\e002";
+}
+body {
+	background: #CCCCCC;
+}
+.container:before, .container:after {
+    content: "";
+    display: table;
+}
+.container:after {
+    clear: both;
+}
+.container:before, .container:after {
+    content: "";
+    display: table;
+}
+.container {
+	padding: 20px 0;
+    margin: 2em auto;
+    max-width: 980px;
+    min-width: 320px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.header h1 {
+	padding: 0;
+}
+.header h2 {
+	text-align: right;
+	font-size: 0.9em;
+	font-family: "Volkhov";
+	display: table-cell;
+    vertical-align: middle !important;
+    font-style: italic;
+    color: #848484;
+    font-weight: 100;
+}
+.header .three {
+	height: 100px;
+    display: table;
+}
+a:hover {
+	color: #87D300;
+}
+.navbar a.toggle {
+    background: none repeat scroll 0 0 white;
+    border-radius: 4px;
+    color: #58595b;
+    display: inline-block;
+    font-size: 1.2rem;
+    height: 28px;
+    line-height: 28px;
+    position: absolute;
+    right: 4%;
+    text-align: center;
+    top: 0%;
+    width: 34px;
+    display: none;
+}
+.navbar {
+	margin-top: 1.5em;
+	margin-bottom: 0.8em;
+	border-bottom: 1px solid #cccccc;
+	min-height: 30px;
+}
+#home {
+	margin-top: 0.7em;
+}
+.navbar ul li {
+    display: table-cell;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+.navbar ul {
+	float: left;
+}
+.navbar ul#menu-social {
+	float: right;
+	font-family: "icomoon";
+}
+.navbar ul li > a {
+	font-family: "Volkhov";
+	text-transform: uppercase;
+	text-shadow: none;
+	height: 30px;
+    line-height: 30px;
+    padding: 0 16px 0 0;
+    font-size: 0.95em;
+}
+.gumby-no-touch .navbar ul li:hover > a, .gumby-no-touch .navbar ul li.current-menu-item > a {
+	background: #fff;
+	color: #87D300;
+}
+.gumby-no-touch .navbar ul li.current-menu-item > a {
+	
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Volkhov";
+	font-weight: 700;
+}
+h1, h2, h3, h4, h5, h6, p {
+	color: #58595b;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: #58595b;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+	color: #87D300;
+}
+.latest h4 {
+	padding-top: 0;
+	line-height: 1;
+}
+p {
+	font-size: 0.85em;
+}
+.footer {
+	border-top: 1px solid #cccccc;
+	margin-top: 1em;
+	padding-top: 1em;
+}
+.footer p {
+	margin: 0;
+}
+.separator {
+	border-bottom: 1px solid #cccccc;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.slider {
+	padding-bottom: 0.45em;
+}
+.InSIDE .type-post {
+	border-bottom: 1px solid #cccccc;
+	padding: 0.3em 0.2em;
+}
+.InSIDE .type-post:last-child {
+	border-bottom: none;
+}
+.InSIDE .type-post h4 {
+	font-size: 0.85em;
+	float: left;
+	display: inline;
+	font-weight: 400;
+	font-family: "Lato";
+}
+.InSIDE .type-post a h4, .InSIDE .type-post a h5 {
+	color: #333;
+}
+.InSIDE .type-post a h4:hover, .InSIDE .type-post a h5:hover {
+	color: #87D300;
+}
+.InSIDE .type-post h5 {
+	font-size: 0.75em;
+	float: right;
+	font-weight: 400;
+	font-family: "Lato";
+}
+.latestProjects {
+	padding-top: 0.45em;
+}
+.latestProjects p {
+	margin: 0;
+}
+.latestProjects a {
+	color: #333;
+}
+.latestProjects a:hover {
+	color: #87D300;
+}
+.latestProjects img {
+	width: 100%;
+	height: auto;
+}
+.twitter, .tweets {
+	list-style: none;
+	font-size: 0.87em;
+	line-height: 1.1;
+	font-family: "Lato";
+	margin: 0;
+	color: #333333;
+}
+.tweets li {
+	padding: 0.9em 0;
+	margin: 0;
+	border-bottom: 1px solid #cccccc;
+}
+.tweets li:last-child {
+	border-bottom: none;
+}
+h2.widgettitle {
+	font-size: 1.625rem;
+}
+.title {
+	text-align: right;
+}
+.title a {
+	color: #333333;
+	font-weight: 700;
+}
+.title a:hover, .title.active a {
+	color: #87D300;
+}
+.whatWeDo2 {
+	margin-bottom: 0.8em;
+}
+.whatWeDo2 span {
+	display: inline-block;
+	padding: 0 16px 7px 0;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	line-height: 1;
+}
+.carousel {
+	margin-bottom: 1.5em;
+}
+#whatquote {
+	width: 100%;
+	clear: both;
+	margin: 1.5em auto;
+	padding: 1.5em 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+#whatquote:before, #whatquote:after {
+    content: "";
+    display: table;
+}
+#whatquote:after {
+    clear: both;
+}
+
+div#quote, div#quote p, div.quote, div.quote p, div.quote_what, div.quote_what p {
+    color: #87d300;
+    font-family: "Lato",Helvetica,Arial,sans-serif !important;
+    font-size: 1.1em;
+	text-transform: uppercase;
+	line-height: 1.1;
+    padding: 0;
+}
+.quote-author {
+    margin-top: 0 !important;
+}
+cite {
+    font-size: 1em;
+    margin-top: 14px;
+    font-family: "Volkhov";
+}
+.whatWeDoContent h4 {
+	text-transform: uppercase;
+	padding-top: 0;
+	font-style: italic;
+}
+.hide-for-large {
+	display: none;
+}
+.cat_list {
+	margin-bottom: 0.8em;
+}
+.cat_list li {
+	display: inline-block;
+	padding: 0 16px 0 0;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	font-weight: 700;
+}
+.cat_list li a {
+	color: #58595b;
+}
+.cat_list li.active a, .cat_list li a:hover {
+	color: #87D300;
+}
+.filtered img {
+	width: 100%;
+	height: auto;
+}
+.filtered a {
+	color: #333333;
+}
+.filtered a:hover {
+	color: #87D300;
+}
+.founder .title {
+	text-align: left;
+}
+.founder a {
+	display: block;
+}
+.founder .closed a {
+    background: url("img/arrows.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+}
+.founder .open a {
+    background: url("img/arrow2.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+}
+.awardlist {
+    font-size: 0.8em;
+    margin-bottom: 12px;
+}
+dl {
+    color: #58595b;
+    line-height: 1.2;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.awardlist {
+	font-size: 0.7em;
+}
+.awardlist dt {
+	width: 100%;
+	white-space:nowrap;
+	display: block;
+	overflow: hidden;
+	font-weight: normal !important;
+	font-size: 1.1em;
+}
+.awardlist dd {
+	width: 80%;
+	margin-left: 50px;
+	margin-right: 0;
+	margin-bottom: 5px;
+	font-weight: normal !important;
+	display: block;
+	margin-top: -5px;
+}
+.awardlist span {
+	display: block;
+	float: left;
+	width: 50px;
+	font-weight: bold !important;
+	margin-bottom: 5px;
+}
+.alignleft {
+	float: left;
+	margin: 0 0.5em 0 0;
+}
+.alignright {
+	float: right;
+	margin: 0 0 0 0.5em;
+}
+.alignnone {
+	float: none;
+	margin: 0 0.5em;
+}
+.aligncenter {
+	display: inline-block;
+	margin: 0 auto;
+}
+.mejs-container {
+  width: 100% !important;
+  height: auto !important;
+  padding-top: 57%;
+}
+.mejs-overlay, .mejs-poster {
+  width: 100% !important;
+  height: 100% !important;
+}
+.mejs-mediaelement video {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+#meta span {
+	font-size: 0.85em;
+}
+.cbp-qtrotator {
+	position: relative;
+}
+.cbp-qtcontent {
+	position: absolute;
+	opacity: 0;
+}
+.cbp-qtcurrent {
+	position: relative; 
+    z-index: 100;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+@media only screen and (max-width: 767px) {
+	.container {
+	    margin: 0 auto;
+	    padding: 0 0 20px 0;
+	}
+	.header .three.columns, .row .six.columns {
+		width: 100% !important;
+		text-align: center;
+	}
+	.header .three {
+		height: auto;
+	}
+	.header h2 {
+		text-align: center;
+		border-top: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+		font-size: 10px;
+		padding: 0.45em; 0;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 94%;
+	}
+	h2.widgettitle {
+		font-size: 100%;
+	}
+	p, .InSIDE .type-post h4, .InSIDE .type-post h5 {
+		font-size: 0.75em;
+	}
+	.hide-for-small {
+		display: none;
+	}
+	.hide-for-large {
+		display: block;
+	}
+	.navbar {
+		border-bottom: none;
+		margin: 0.5em 0 0 0;
+	}
+	.navbar a.toggle {
+		display: block;	
+	}
+	.navbar ul {
+		top: 30px;	
+		background: #fff;
+	}
+	.navbar ul li {
+	    display: block;
+	    height: 30px;
+	    min-height: 30px;
+	    width; 100%;
+	    line-height: 30px;
+	    margin: 0;
+	    padding-bottom: 0;
+	    text-align: right;
+	    border-bottom: 1px solid #87D300;
+	}
+	.gumby-no-touch .navbar ul li:hover > a, .gumby-no-touch .navbar ul li.current-menu-item > a {
+		background: #fff;
+		color: #87D300;
+	    border-bottom: 1px solid #87D300;
+	}
+	.navbar ul#menu-social {
+		display: none;
+	}
+	.latestProjects p {
+		margin-bottom: 13px;
+	}
+	#home {
+		margin-top: 0;
+	}
+}
