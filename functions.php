@@ -312,9 +312,9 @@ function quotes() {
 add_action( 'init', 'quotes', 0 );
 function home_slider() {
 	$labels = array(
-		'name'                => _x( 'Slider', 'Post Type General Name', 'side' ),
+		'name'                => _x( 'Sliders', 'Post Type General Name', 'side' ),
 		'singular_name'       => _x( 'Slider', 'Post Type Singular Name', 'side' ),
-		'menu_name'           => __( 'Slider', 'side' ),
+		'menu_name'           => __( 'Sliders', 'side' ),
 		'parent_item_colon'   => __( 'Parent Slider:', 'side' ),
 		'all_items'           => __( 'All Sliders', 'side' ),
 		'view_item'           => __( 'View Slider', 'side' ),
@@ -562,3 +562,94 @@ function what_we() {
     ) );
 }
 add_action( 'p2p_init', 'what_we' );
+
+add_action( 'dashboard_glance_items', 'my_add_cpt_to_dashboard' );
+
+function my_add_cpt_to_dashboard() {
+	$showTaxonomies = 1;
+	if ($showTaxonomies) {
+		$taxonomies = get_taxonomies( array( '_builtin' => false ), 'objects' );
+		foreach ( $taxonomies as $taxonomy ) {
+			$num_terms  = wp_count_terms( $taxonomy->name );
+			$num = number_format_i18n( $num_terms );
+			$text = _n( $taxonomy->labels->singular_name, $taxonomy->labels->name, $num_terms );
+			$associated_post_type = $taxonomy->object_type;
+			if ( current_user_can( 'manage_categories' ) ) {
+			  $output = '<a href="edit-tags.php?taxonomy=' . $taxonomy->name . '&post_type=' . $associated_post_type[0] . '">' . $num . ' ' . $text .'</a>';
+			}
+			echo '<li class="taxonomy-count">' . $output . ' </li>';
+		}
+	}
+	// Custom post types counts
+	$post_types = get_post_types( array( '_builtin' => false ), 'objects' );
+	foreach ( $post_types as $post_type ) {
+		if($post_type->show_in_menu==false) {
+			continue;
+		}
+		$num_posts = wp_count_posts( $post_type->name );
+		$num = number_format_i18n( $num_posts->publish );
+		$text = _n( $post_type->labels->singular_name, $post_type->labels->name, $num_posts->publish );
+		if ( current_user_can( 'edit_posts' ) ) {
+			$output = '<a href="edit.php?post_type=' . $post_type->name . '">' . $num . ' ' . $text . '</a>';
+		}
+		echo '<li class="page-count ' . $post_type->name . '-count">' . $output . '</td>';
+	}
+}
+
+function add_menu_icons_styles(){
+ 
+	echo '<style>
+	#adminmenu #menu-posts-slider div.wp-menu-image:before, #dashboard_right_now .slider-count a:before {
+		content: "\f233";
+	}
+	#adminmenu #menu-posts-founder div.wp-menu-image:before, #dashboard_right_now .founder-count a:before {
+		content: "\f307";
+	}
+	#adminmenu #menu-posts-quote div.wp-menu-image:before, #dashboard_right_now .quote-count a:before {
+		content: "\f122";
+	}
+	#adminmenu #menu-posts-what-we-do div.wp-menu-image:before, #dashboard_right_now .what-we-do-count a:before {
+	    content: "\f491";
+	}
+	}
+	#adminmenu #menu-posts-projects div.wp-menu-image:before, #dashboard_right_now .projects-count a:before {
+	    content: "\f493";
+	}
+	#adminmenu #menu-posts-awards div.wp-menu-image:before, #dashboard_right_now .awards-count a:before {
+	    content: "\f313";
+	}
+	</style>';
+
+}
+add_action( 'admin_head', 'add_menu_icons_styles' );
+
+function my_login_logo() { ?>
+    <style type="text/css">
+        body.login  {
+	    	background: #fff;
+	    }
+        body.login div#login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/header/logo.png);
+            padding-bottom: 30px;
+		    background-position: center top;
+		    background-repeat: no-repeat;
+		    background-size: 101px 90px;
+		    height: 99px;
+		    line-height: 1;
+		    margin: 0 auto 25px;
+		    outline: 0 none;
+		    overflow: hidden;
+		    padding: 0;
+		    text-decoration: none;
+		    text-indent: -9999px;
+		    width: 257px;
+		}
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+function remove_footer_admin () {
+	echo '&copy; '. date('Y') . ' Side UK. Site built by <a href="https://www.prydonian.digital">Mark Duwe</a>.';
+	echo '<style>#wp-admin-bar-updates,.update-plugins{display:none !important;}.category-adder {display: none !important;}</style>';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');
