@@ -1,8 +1,6 @@
 Gumby.init();
 $(function() {
-	if(element_exists('.quote')) {
-		$( '#cbp-qtrotator' ).cbpQTRotator();
-	}
+	$('#cbp-qtrotator').cbpQTRotator();
 	$("#ch-carousel").owlCarousel({
 		items: 1,
 		lazyLoad : true,
@@ -37,9 +35,6 @@ $(function() {
 		}
 		//$('.whatWeDoContent').hide();
 		//$('.whatWeDoContent').hide();
-		$( ".whatWeDoContent" ).load($content, function() {
-  alert( "Load was performed." );
-});
 		$('.whatWeDoContent[data-slug='+$content+']').slideDown('slow');
 	});
 	$('.whatWeDo2 span a').click(function(e){
@@ -72,6 +67,7 @@ $(function() {
 				rewindSpeed: 10
 			});
 		});
+		$('#cbp-qtrotator').cbpQTRotator();
 	});
 		$( ".whatWeDoContent" ).load('http://localhost:8888/side/what-we-do/casting/', function(){
 			$("#ch-carousel").owlCarousel({
@@ -91,6 +87,7 @@ $(function() {
 				stopOnHover: true,
 				rewindSpeed: 10
 			});
+			$('#cbp-qtrotator').cbpQTRotator();
 		});
 	$('.founder .content').hide();
 	$('a').each(function(i) {

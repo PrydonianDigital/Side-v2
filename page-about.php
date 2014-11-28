@@ -19,7 +19,7 @@
     <?php endif; ?>
 	
 	<div class="row">
-		<div class="twelve columns separator"></div>
+		<div class="twelve columns separator small"></div>
 	</div>
 
 	<div class="row" id="page-awards">
@@ -33,6 +33,31 @@
 			<img src="<?php global $post; $image = get_post_meta( $post->ID, '_cmb_image', true ); echo $image;  ?>">
 		</div>
 		<div class="large-8 columns">
+			<p><strong>TIGA Game Industry Award</strong></p>
+			<dl class="awardlist">
+    		<?php
+				$args = array (
+					'post_type' => 'awards',
+					'posts_per_page' => '100',
+					'order' => 'ASC',
+					'orderby' => 'menu_order',
+					'award_type' => 'TIGA Game Industry Award',
+				);
+				$awards = new WP_Query( $args );
+				if ( $awards->have_posts() ) {
+					while ( $awards->have_posts() ) {
+						$awards->the_post();
+			?>
+					<dt><span><?php global $post; $year = get_post_meta( $post->ID, '_cmb_year', true ); echo $year;  ?></span> <?php the_title(); ?></dt>
+						<dd><?php global $post; $extra = get_post_meta( $post->ID, '_cmb_extra', true ); echo $extra;  ?></dd>
+			<?php
+					}
+				} else {
+					// no posts found
+				}
+				wp_reset_postdata();    		
+    		?>		
+			</dl>
 			<p><strong>Develop Industry Excellence Awards</strong></p>
 			<dl class="awardlist">
     		<?php
@@ -41,6 +66,7 @@
 					'posts_per_page' => '100',
 					'order' => 'ASC',
 					'orderby' => 'menu_order',
+					'award_type' => 'Develop Industry Excellence Awards',
 				);
 				$awards = new WP_Query( $args );
 				if ( $awards->have_posts() ) {

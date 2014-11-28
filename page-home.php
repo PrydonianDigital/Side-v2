@@ -2,7 +2,7 @@
 
 <div class="row" id="home">
 	
-	<div class="eight columns hide-for-small" role="main">
+	<div class="eight columns hide-for-small" role="main" id="banner">
 		<div id="ch-carousel" class="owl-carousel">
 		<?php $args = array(
 			'post_type' => 'slider',

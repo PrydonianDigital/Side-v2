@@ -6,8 +6,8 @@
 			<h3 class="page-title" itemprop="name"><?php the_title(); ?></h3>
 		</div>
 	</div>
-	<div <?php post_class('row'); ?> id="">
-		<div class="twelve columns separator"></div>
+	<div class="row" id="">
+		<div class="twelve columns separator small"></div>
 	</div>
 	<div class="row" itemscope itemtype="http://schema.org/CreativeWork">
 		<div id="infoMeta">
@@ -66,11 +66,11 @@
 	</div>
 	<div class="row">
 		<div class="twelve columns" id="back">
-				<a href="/work/"><img src="<?php bloginfo('template_url'); ?>/img/back.png" alt="back" width="16" height="18" /> Back to work</a>
+				<a href="/work/">Back to work</a>
 		</div>
 	</div>
 	<div class="row">
-		<div class="twelve columns separator"></div>
+		<div class="twelve columns separator small"></div>
 	</div>
 	<div class="row">
 		<div class="four columns" data-title="<?php the_title(); ?>">
@@ -99,7 +99,7 @@
 		<div class="eight columns" itemprop="description">
 			<?php add_filter('the_content', 'wpautop'); the_content(); ?>
 
-			<p class="sharing" data-url="<?php the_permalink(); ?>"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="facebookShare" target="_blank"><i class="icon-facebook"></i><span class="sharecount">-</span></a> <a href="https://twitter.com/intent/tweet?text=<?php echo get_the_title(); ?>&url=<?php the_permalink(); ?>&via=SideUK" class="twitterShare" target="_blank"><i class="icon-twitter"></i><span class="tweetcount">-</span></a> <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" class="oneShare" target="_blank"><i class="icon-google-plus"></i><span class="onecount">-</span></a></p>
+			<p class="sharing" data-url="<?php the_permalink(); ?>"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="facebookShare" target="_blank"><i class="icon-facebook"></i></a> <a href="https://twitter.com/intent/tweet?text=<?php echo get_the_title(); ?>&url=<?php the_permalink(); ?>&via=SideUK" class="twitterShare" target="_blank"><i class="icon-twitter"></i></a></p>
 		</div>
 	
     	
