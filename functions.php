@@ -611,6 +611,8 @@ function add_menu_icons_styles(){
 	#adminmenu #menu-posts-what-we-do div.wp-menu-image:before, #dashboard_right_now .what-we-do-count a:before {
 	    content: "\f491";
 	}
+	#dashboard_right_now .taxonomy-count a:before {
+	    content: "\f325";
 	}
 	#adminmenu #menu-posts-projects div.wp-menu-image:before, #dashboard_right_now .projects-count a:before {
 	    content: "\f493";
@@ -647,6 +649,8 @@ function my_login_logo() { ?>
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+
 
 function remove_footer_admin () {
 	echo '&copy; '. date('Y') . ' Side UK. Site built by <a href="https://www.prydonian.digital">Mark Duwe</a>.';
