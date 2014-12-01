@@ -334,11 +334,11 @@ h2.widgettitle {
 	color: #87D300;
 }
 .whatWeDo2 {
-	margin-bottom: 0.9em;
+	margin-bottom: 1.5em;;
 }
 .whatWeDo2 span {
 	display: inline-block;
-	padding: 0 16px 7px 0;
+	padding: 0 16px 0 0;
 	text-transform: uppercase;
 	font-size: 0.8em;
 	line-height: 1;
@@ -393,7 +393,7 @@ cite {
 	display: none;
 }
 .cat_list {
-	margin-bottom: 0.8em;
+	margin-bottom: 1.5em;
 }
 .cat_list li {
 	display: inline-block;
@@ -401,6 +401,7 @@ cite {
 	text-transform: uppercase;
 	font-size: 0.8em;
 	font-weight: 400;
+	line-height: 1;
 }
 .cat_list li a {
 	color: #58595b;
@@ -597,5 +598,12 @@ dl {
 	}
 	#home {
 		margin-top: 0;
+	}
+	.whatWeDo2 span {
+		display: inline-block;
+		padding: 0 16px 0 0;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		line-height: 1;
 	}
 }

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="row" id="home">
+	<div class="row" id="homePage">
 		<div class="four columns">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
