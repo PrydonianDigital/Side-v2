@@ -95,15 +95,13 @@ body {
 	text-align: right;
 	font-size: 0.85em;
 	font-family: "Volkhov";
-	display: table-cell;
-    vertical-align: middle !important;
     font-style: italic;
     color: #848484;
     font-weight: 100;
+    padding-top: 2.5em;
 }
 .header .three {
 	height: 90px;
-    display: table;
 }
 a:hover {
 	color: #87D300;
@@ -160,7 +158,7 @@ a:hover {
 	height: 30px;
     line-height: 30px;
     padding: 0 16px 0 0;
-    font-size: 0.95em;
+    font-size: 0.9em;
 }
 .gumby-no-touch .navbar ul li:hover > a, .gumby-no-touch .navbar ul li.current-menu-item > a, .gumby-no-touch .navbar ul li.current-menu-parent > a {
 	background: #fff;
@@ -186,7 +184,7 @@ h3 {
 	font-size: 1.8rem;
 }
 h4 {
-	font-size: 1.6rem
+	font-size: 1.4rem
 }
 h5 {
 	
@@ -321,7 +319,7 @@ p {
 	border-bottom: none;
 }
 h2.widgettitle {
-	font-size: 1.625rem;
+	font-size: 1.4rem
 }
 .title {
 	text-align: right;
@@ -340,7 +338,7 @@ h2.widgettitle {
 	display: inline-block;
 	padding: 0 16px 0 0;
 	text-transform: uppercase;
-	font-size: 0.8em;
+	font-size: 0.78em;
 	line-height: 1;
 }
 .carousel {
@@ -399,7 +397,7 @@ cite {
 	display: inline-block;
 	padding: 0 16px 0 0;
 	text-transform: uppercase;
-	font-size: 0.8em;
+	font-size: 0.78em;
 	font-weight: 400;
 	line-height: 1;
 }
@@ -407,6 +405,9 @@ cite {
 	color: #58595b;
 }
 .cat_list li.active a, .cat_list li a:hover {
+	color: #87D300;
+}
+.InSIDE .type-post[data-current="active"] a h4, .InSIDE .type-post[data-current="active"] a h5 {
 	color: #87D300;
 }
 .filtered img {
@@ -434,13 +435,13 @@ cite {
 #awardsSection p {
 	margin-bottom: 0;
 }
-h3.awards, h3.biog {
+h4.awards, h4.biog {
 	padding-top: 0;
 	line-height: 1;
 }
 .awardlist {
     font-size: 0.8em;
-    margin-bottom: 2px;
+    margin-bottom: 12px;
 }
 dl {
     color: #58595b;
@@ -545,7 +546,7 @@ dl {
 		text-align: center;
 		border-top: 1px solid #cccccc;
 		border-bottom: 1px solid #cccccc;
-		font-size: 10px;
+		font-size: 0.85em;
 		padding: 0.47em; 0;
 	}
 	h1, h2, h3, h4, h5, h6 {
@@ -600,10 +601,11 @@ dl {
 		margin-top: 0;
 	}
 	.whatWeDo2 span {
-		display: inline-block;
-		padding: 0 16px 0 0;
+		display: block;
+		padding: 0 16px 6px 0;
 		text-transform: uppercase;
 		font-size: 0.8em;
 		line-height: 1;
+		text-align: left;
 	}
 }

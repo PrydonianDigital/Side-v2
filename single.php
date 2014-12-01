@@ -40,7 +40,7 @@
 		);
 		$homeposts = new WP_Query( $args );
 		if ($homeposts->have_posts()) : while ($homeposts->have_posts()) : $homeposts->the_post(); ?>
-		<div <?php post_class('row'); ?>>
+		<div <?php post_class('row'); ?> id="postid-<?php the_ID(); ?>" data-current="<?php if ( $post->ID == $wp_query->post->ID ) { echo 'active'; } else {} ?>">
 			<a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>">
 			<div class="nine columns">
 				<h4><?php the_title(); ?></h4>

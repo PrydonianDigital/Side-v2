@@ -24,7 +24,7 @@
 
 	<div class="row" id="page-awards">
 		<div class="twelve columns">
-			<h3 class="awards">AWARDS</h3>
+			<h4 class="awards">AWARDS</h4>
 		</div>
 	</div>  
 
@@ -93,7 +93,7 @@
 	
 	<div class="row">
 		<div class="twelve columns">
-			<h3 class="biog">BIOGRAPHIES</h3>
+			<h4 class="biog">BIOGRAPHIES</h4>
 		</div>
 	</div>
 	

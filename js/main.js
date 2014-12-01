@@ -1,13 +1,16 @@
 Gumby.init();
 $(function() {
+	if($('.type-post').data('current') == 'active'){
+		$(this).addClass('active');
+	}
 	$('#cbp-qtrotator').cbpQTRotator();
 	$("#ch-carousel").owlCarousel({
 		items: 1,
 		lazyLoad : true,
 		navigation : false,
 		pagination: false,
-		slideSpeed : 4500,
-		paginationSpeed : 1500,
+		slideSpeed : 2500,
+		paginationSpeed : 500,
 		navigationText: ["",""],
 		autoPlay: true,
 		itemsDesktop: false,
@@ -16,7 +19,7 @@ $(function() {
 		itemsTabletSmall: false,
 		itemsMobile: false,
 		stopOnHover: true,
-		rewindSpeed: 10
+		rewindSpeed: 1500
 	});
 	if(element_exists('.single-projects')) {
 		$('#menu-item-612').addClass('active');
@@ -59,8 +62,8 @@ $(function() {
 				lazyLoad : true,
 				navigation : false,
 				pagination: false,
-				slideSpeed : 4500,
-				paginationSpeed : 1500,
+				slideSpeed : 2000,
+				paginationSpeed : 500,
 				navigationText: ["",""],
 				autoPlay: true,
 				itemsDesktop: false,
@@ -69,7 +72,7 @@ $(function() {
 				itemsTabletSmall: false,
 				itemsMobile: false,
 				stopOnHover: true,
-				rewindSpeed: 10
+				rewindSpeed: 1500
 			});
 		});
 	});
@@ -79,8 +82,8 @@ $(function() {
 				lazyLoad : true,
 				navigation : false,
 				pagination: false,
-				slideSpeed : 4500,
-				paginationSpeed : 1500,
+				slideSpeed : 2000,
+				paginationSpeed : 500,
 				navigationText: ["",""],
 				autoPlay: true,
 				itemsDesktop: false,
@@ -89,7 +92,7 @@ $(function() {
 				itemsTabletSmall: false,
 				itemsMobile: false,
 				stopOnHover: true,
-				rewindSpeed: 10
+				rewindSpeed: 1500
 			});
 			$('#cbp-qtrotator').cbpQTRotator();
 		});
