@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<div class="row" id="page-header" itemscope itemtype="http://schema.org/CreativeWork">
-		<div class="twelve columns">
-			<h3 class="page-title" itemprop="name"><?php the_title(); ?></h3>
+	<div class="row" id="home" itemscope itemtype="http://schema.org/CreativeWork">
+		<div class="twelve columns singleTitle">
+			<h4 itemprop="name"><?php the_title(); ?></h4>
 		</div>
 	</div>
 	<div class="row" id="">
@@ -40,6 +40,11 @@
 						</div>
 					</div>
 				</div>
+	<div class="row">
+		<div class="twelve columns" id="back">
+				<a href="/work/">Back to work</a>
+		</div>
+	</div>
 			</div>
 			<div class="eight columns">
 					<?php
@@ -62,11 +67,6 @@
 			    		endwhile; else : endif; wp_reset_postdata();
 			    	?>		
 			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="twelve columns" id="back">
-				<a href="/work/">Back to work</a>
 		</div>
 	</div>
 	<div class="row">

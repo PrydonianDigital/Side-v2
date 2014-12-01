@@ -1,9 +1,9 @@
 <?php get_header(); ?>
-	<div class="row">
+	<div class="row" id="home">
 		<div class="eight columns">
 			<div class="row" id="page-header">
-				<div class="twelve columns">
-					<h4 class="page-title"><?php the_title(); ?></h4>
+				<div class="twelve columns singleTitle">
+					<h4><?php the_title(); ?></h4>
 				</div>
 			</div>
 	<div class="row">
@@ -27,12 +27,13 @@
 		<div class="four columns InSIDE" id="newsSidebar">
 			<div class="row">
 				<div class="twelve columns">
-					<h4 class="page-title">InSIDE ARCHIVE</h4>
+					<h4>InSIDE ARCHIVE</h4>
 				</div>
 			</div>	
+
 	<div class="row">
-		<div class="twelve columns separator inside"></div>
-	</div>		
+		<div class="twelve columns separator small"></div>
+	</div>
 		<?php $args = array(
 			'post_type' => 'post',
 			'posts_per_page' => '20'

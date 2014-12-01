@@ -15,7 +15,7 @@
 			</div>
 			<div id="WhatWequote" class="row">
 				<div class="whatquote">
-				<div class="push_six six columns quote">
+				<div class="push_four five columns quote">
 					<div id="cbp-qtrotator" class="cbp-qtrotator">
 						<?php
 						// Find connected pages
