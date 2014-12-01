@@ -18,6 +18,9 @@ $(function() {
 		stopOnHover: true,
 		rewindSpeed: 10
 	});
+	if(element_exists('.single-projects')) {
+		$('#menu-item-612').addClass('active');
+	}
 	$('.whatWeDo .what-we-do:first-child .title').addClass('active');
 	$('.whatWeDo2 span:first-child').addClass('active');
 	//$('.whatWeDoContent').hide();
@@ -49,6 +52,8 @@ $(function() {
 			$title.addClass('active');
 		}
 		$( ".whatWeDoContent" ).load($content+'/', function(){
+			
+			$('#cbp-qtrotator').cbpQTRotator();
 			$("#ch-carousel").owlCarousel({
 				items: 1,
 				lazyLoad : true,
@@ -67,9 +72,8 @@ $(function() {
 				rewindSpeed: 10
 			});
 		});
-		$('#cbp-qtrotator').cbpQTRotator();
 	});
-		$( ".whatWeDoContent" ).load('http://localhost:8888/side/what-we-do/casting/', function(){
+		$( ".whatWeDoContent" ).load('/what-we-do/casting/', function(){
 			$("#ch-carousel").owlCarousel({
 				items: 1,
 				lazyLoad : true,

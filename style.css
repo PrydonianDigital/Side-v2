@@ -162,7 +162,7 @@ a:hover {
     padding: 0 16px 0 0;
     font-size: 0.95em;
 }
-.gumby-no-touch .navbar ul li:hover > a, .gumby-no-touch .navbar ul li.current-menu-item > a {
+.gumby-no-touch .navbar ul li:hover > a, .gumby-no-touch .navbar ul li.current-menu-item > a, .gumby-no-touch .navbar ul li.current-menu-parent > a {
 	background: #fff;
 	color: #87D300;
 }
