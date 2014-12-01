@@ -132,6 +132,12 @@ a:hover {
 #home {
 	margin-top: 0.7em;
 }
+#homePage {
+	margin-top: 1.5em;
+}
+#ch-carousel {
+	border: 1px solid #ccc;
+}
 .navbar ul li {
     display: table-cell;
     height: 30px;

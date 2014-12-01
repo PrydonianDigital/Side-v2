@@ -3,7 +3,7 @@
 require_once 'Mobile_Detect.php';
 $detect = new Mobile_Detect;	
 ?>
-<div class="row" id="home">
+<div class="row" id="homePage">
 <?php
 if( $detect->isTablet() ){
 ?>
