@@ -1,14 +1,36 @@
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php
+require_once 'Mobile_Detect.php';
+$detect = new Mobile_Detect;
+if ( $detect->isMobile() ) {	
+?>
 			<div class="four columns carousel">
 				<div id="ch-carousel" class="owl-carousel">
 				<?php global $post; $image1 = get_post_meta( $post->ID, '_cmb_wwd1', true ); if( $image1 != '' ) :  ?>
 				    <div class="item"><img class="lazyOwl" data-src="<?php global $post; $image1 = get_post_meta( $post->ID, '_cmb_wwd1', true ); echo $image1;  ?>"></div>
+				<?php endif; ?>	
+				</div>			
+			</div>
+<?php
+} else {	
+?>
+			
+			<div class="four columns carousel">
+				<div id="ch-carousel" class="owl-carousel">
+				<?php global $post; $image1 = get_post_meta( $post->ID, '_cmb_wwd1', true ); if( $image1 != '' ) :  ?>
+				    <div class="item"><img class="lazyOwl" data-src="<?php global $post; $image1 = get_post_meta( $post->ID, '_cmb_wwd1', true ); echo $image1;  ?>"></div>
+				<?php endif; ?>	
+				<?php global $post; $image2 = get_post_meta( $post->ID, '_cmb_wwd2', true ); if( $image2 != '' ) :  ?>
 				    <div class="item"><img class="lazyOwl" data-src="<?php global $post; $image2 = get_post_meta( $post->ID, '_cmb_wwd2', true ); echo $image2;  ?>"></div>
+				<?php endif; ?>	
+				<?php global $post; $image3 = get_post_meta( $post->ID, '_cmb_wwd3', true ); if( $image3 != '' ) :  ?>
 				    <div class="item"><img class="lazyOwl" data-src="<?php global $post; $image3 = get_post_meta( $post->ID, '_cmb_wwd3', true ); echo $image3;  ?>"></div>
 				<?php endif; ?>	
 				</div>			
 			</div>
-			
+<?php
+}	
+?>			
 			<div class="eight columns">
 				<h5><?php the_title(); ?></h5>
 				<?php the_content(); ?>

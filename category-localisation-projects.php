@@ -10,7 +10,7 @@
     		<?php
     			$args = array (
     				'post_type' => 'projects',
-    				'posts_per_page' => '12',
+    				'posts_per_page' => '9',
     				'category_name' => 'localisation-projects',
     				'order' => 'DESC',
     				'orderby' => 'menu_order'

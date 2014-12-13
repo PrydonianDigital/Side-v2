@@ -18,7 +18,7 @@
 		<div class="header" role="banner">
 			<div class="row">
 				<div class="six columns">
-					<h1 class="hide-for-small"><a href="<?php bloginfo( 'url' ); ?>"><img src="<?php bloginfo( 'template_url' ); ?>/img/header/logo.png"></a></h1>
+					<h1 class="hide-for-small mainLogo"><a href="<?php bloginfo( 'url' ); ?>"><img src="<?php bloginfo( 'template_url' ); ?>/img/header/logo.png"></a></h1>
 					<h1 class="hide-for-large"><a href="<?php bloginfo( 'url' ); ?>"><img src="<?php bloginfo( 'template_url' ); ?>/img/header/logo_responsive.png"></a></h1>
 				</div>
 				<div class="push_three three columns">
@@ -29,7 +29,7 @@
 		<div class="row">
 		<div class="navbar" id="nav1" role="navigation">
 			<div class="row">
-				<a class="toggle" gumby-trigger="#nav1 ul.menu" href="#"><i class="icon-menu"></i></a>
+				<a class="toggle" gumby-trigger="#nav1 ul.menu" href="#"><span>Menu</span> <i class="icon-menu"></i></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'sideUKmenu', 'container' => false, 'walker' => new Walker_Page_Custom ) ); ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'social', 'container' => false, 'walker' => new Walker_Page_Custom ) ); ?>
 			</div>
