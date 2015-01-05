@@ -29,13 +29,14 @@
 		);
 		$homeposts = new WP_Query( $args );
 		if ($homeposts->have_posts()) : while ($homeposts->have_posts()) : $homeposts->the_post(); ?>
-		<div <?php post_class('row'); ?>>
-			<a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>">
+		<div <?php post_class('row'); ?> itemscope itemtype="http://schema.org/BlogPosting">
+			<a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>" rel="permalink">
 			<div class="nine columns">
-				<h4><?php the_title(); ?></h4>
+				<h4 class="entry-title"><?php the_title(); ?></h4>
+				<span class="vcard author"><span class="fn">SideUK</span></span>
 			</div>
 			<div class="three columns">
-				<h5><?php the_time('M Y') ?></h5>
+				<h5 class="published updated" datetime="<?php the_time( 'c' ); ?>"><?php the_time('M Y') ?></h5>
 			</div>
 			</a>
 		</div>
@@ -63,9 +64,11 @@
 		);
 		$latest = new WP_Query( $args );
 		if ($latest->have_posts()) : while ($latest->have_posts()) : $latest->the_post(); ?>
-		<div <?php post_class('four columns'); ?>>
+		<div <?php post_class('four columns'); ?> itemscope itemtype="http://schema.org/CreativeWork">
 			<a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>"><?php the_post_thumbnail('project'); ?></a>
-			<p><a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></a></p>
+			<p class="entry-title"><a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></a></p>
+			<span class="vcard author"><span class="fn">SideUK</span></span>
+			<span class="published updated" datetime="<?php the_time( 'c' ); ?>"><?php the_time('M Y') ?></span>
 		</div>
 		<?php endwhile; ?>
 	

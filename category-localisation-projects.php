@@ -19,7 +19,7 @@
     				while ( $projects->have_posts() ) {
     					$projects->the_post();
     		?>	
-    			<div class="four columns <?php $post_cats = get_the_category(); foreach( $post_cats as $category ) { echo $category->slug.' ';} ?>">
+    			<div class="four columns hentry <?php $post_cats = get_the_category(); foreach( $post_cats as $category ) { echo $category->slug.' ';} ?>">
     				<div class="row">
     					<div class="twelve columns">
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('slider'); ?></a>
@@ -27,7 +27,9 @@
     				</div>
     				<div class="row">
     					<div class="twelve columns">
-							<p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>					
+							<p class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>					
+							<span class="vcard author"><span class="fn">SideUK</span></span>
+							<span class="published updated" datetime="<?php the_time( 'c' ); ?>"><?php the_time('M Y') ?></span>
     					</div>
     				</div>
     			</div>
