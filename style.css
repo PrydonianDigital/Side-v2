@@ -1,11 +1,11 @@
-/*  
+/*
 Theme Name: Side V2
 Theme URI: http://side.com
 Description: WordPress theme for Side UK
 Version: 2
 Author: Mark Duwe
 Author URI: http://www.prydonian.digital
-Tags: 
+Tags:
 License: Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
 License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
 */
@@ -169,10 +169,10 @@ a:hover {
 }
 .category-localisation-projects #menu-item-612 a {
 	background: #fff;
-	color: #87D300;	
+	color: #87D300;
 }
 .gumby-no-touch .navbar ul li.current-menu-item > a {
-	
+
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Volkhov";
@@ -182,10 +182,10 @@ h1, h2, h3, h4, h5, h6, p {
 	color: #58595b;
 }
 h1 {
-	
+
 }
 h2 {
-	
+
 }
 h3 {
 	font-size: 1.8rem;
@@ -195,7 +195,7 @@ h4 {
 	font-size: 1.4rem
 }
 h5 {
-	
+
 }
 h6 {
 	padding-top: 0;
@@ -269,12 +269,12 @@ img.lazyOwl {
 .InSIDE h4 {
 	margin-bottom: 12px;
 	padding-top: 0;
-	line-height: 1;	
+	line-height: 1;
 	text-align: left;
 }
-.single .InSIDE h4 {
-	padding-top: 0;	
-	line-height: 1;	
+.single .InSIDE h4, #home .InSIDE h4 {
+	padding-top: 0;
+	line-height: 1;
 	margin-bottom: 0;
 	padding-bottom: 4px;
 }
@@ -537,7 +537,7 @@ dl {
 	opacity: 0;
 }
 .cbp-qtcurrent {
-	position: relative; 
+	position: relative;
     z-index: 100;
 	opacity: 1;
 	pointer-events: auto;
@@ -563,7 +563,7 @@ dl {
 		height: auto;
 	}
 	.header h1 {
-		
+
 	}
 	.header h1 img {
 		width: 100%;
@@ -608,10 +608,10 @@ dl {
 		margin: 0.5em 0 0 0;
 	}
 	.navbar a.toggle {
-		display: block;	
+		display: block;
 	}
 	.navbar ul {
-		top: 30px;	
+		top: 30px;
 		background: #fff;
 	}
 	.navbar ul li {

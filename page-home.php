@@ -14,15 +14,15 @@
 		<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 		<div class="item"><img class="lazyOwl" data-src="<?php echo $url; ?>" alt="<?php the_title(); ?>"></div>
 		<?php endwhile; ?>
-	
+
 		<?php else : ?>
-		
+
 		<?php endif; ?>
-		</div>			
+		</div>
 	</div>
-	
+
 	<div class="six columns InSIDE">
-		<h4>InSIDE</h4>
+		<h4><a href="/inside">InSIDE</a></h4>
 		<?php $args = array(
 			'post_type' => 'post',
 			'posts_per_page' => '6'
@@ -41,10 +41,10 @@
 			</a>
 		</div>
 		<?php endwhile; ?>
-	
+
 		<?php else : ?>
-		
-		<?php endif; ?>		
+
+		<?php endif; ?>
 	</div>
 
 	<div class="row">
@@ -52,15 +52,15 @@
 	</div>
 	<div class="row">
 		<div class="twelve columns latest">
-			<h4>LATEST PROJECTS</h4>
-		</div>		
+			<h4><a href="/work/english-language-projects/">LATEST PROJECTS</a></h4>
+		</div>
 	</div>
 	<div class="row latestProjects">
 		<?php $args = array(
    			'post_type' => 'projects',
    			'posts_per_page' => '3',
    			'category_name' => 'english-language-projects',
-   			'orderby' => 'menu_order'	
+   			'orderby' => 'menu_order'
 		);
 		$latest = new WP_Query( $args );
 		if ($latest->have_posts()) : while ($latest->have_posts()) : $latest->the_post(); ?>
@@ -71,24 +71,24 @@
 			<span class="published updated" datetime="<?php the_time( 'c' ); ?>"><?php the_time('M Y') ?></span>
 		</div>
 		<?php endwhile; ?>
-	
+
 		<?php else : ?>
-		
-		<?php endif; ?>	
+
+		<?php endif; ?>
 	</div>
-	
+
 	<div class="row">
 		<div class="twelve columns separator"></div>
 	</div>
-	
+
 	<div class="row">
 		<div class="twelve columns">
 <ul class="twitter">
 			<?php
 				dynamic_sidebar('tweets');
 			?>
-			</ul>			
+			</ul>
 		</div>
 	</div>
 
-<?php get_footer(); ?>	
+<?php get_footer(); ?>

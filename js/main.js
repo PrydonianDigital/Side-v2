@@ -55,7 +55,7 @@ $(function() {
 			$title.addClass('active');
 		}
 		$( ".whatWeDoContent" ).load($content+'/', function(){
-			
+
 			$('#cbp-qtrotator').cbpQTRotator();
 			$("#ch-carousel").owlCarousel({
 				items: 1,
@@ -114,10 +114,11 @@ $(function() {
 			$title.removeClass('closed').addClass('open');
 		} else {
 			$title.removeClass('open').addClass('closed');
-		}	
+		}
 		$(this).parent().next().toggle('slow');
 	});
 	$('.mejs-video').sixteenbynine();
+	$('#newsContent iframe').attr('style', 'width: 100%;').sixteenbynine();
 });
 
 function element_exists(id){
