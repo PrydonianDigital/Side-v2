@@ -550,6 +550,10 @@ dl {
 	font-size: 0.75em;
 	line-height: 28px;
 }
+#iframe#twitter-widget-0, iframe#twitter-widget-0.twitter-timeline.twitter-timeline-rendered {
+	max-width: 100% !important;
+	width: 100% !important;
+}
 @media only screen and (max-width: 767px) {
 	.container {
 	    margin: 0 auto;

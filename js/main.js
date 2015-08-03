@@ -121,6 +121,16 @@ $(function() {
 	$('#newsContent iframe').attr('style', 'width: 100%;').sixteenbynine();
 });
 
+$(window).on('load', function() {
+	$('iframe#twitter-widget-0').each(function () {
+		var head = $(this).contents().find('head');
+		console.log(head);
+		if (head.length) {
+			head.append('<style>.timeline { max-width: 100% !important; width: 100% !important; } .timeline .stream { max-width: 100% !important; width: 100% !important; }</style>');
+		}
+	});
+});
+
 function element_exists(id){
 	if($(id).length > 0){
 		return true;

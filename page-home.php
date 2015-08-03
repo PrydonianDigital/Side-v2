@@ -83,11 +83,8 @@
 
 	<div class="row">
 		<div class="twelve columns">
-<ul class="twitter">
-			<?php
-				dynamic_sidebar('tweets');
-			?>
-			</ul>
+			<h4><a href="https://twitter.com/SideUK" target="_blank">TWITTER</a></h4>
+		<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/SideUK" data-widget-id="524520529730871296" width="900" height="400" data-chrome="noheader nofooter noborders">Tweets by @SideUK</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
 
