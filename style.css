@@ -321,7 +321,7 @@ img.lazyOwl {
 	width: 100%;
 	height: auto;
 }
-.twitter, .tweets {
+.twitter, .tweets, .widget_twitter_timeline {
 	list-style: none;
 	font-size: 0.87em;
 	line-height: 1.1;

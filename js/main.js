@@ -122,11 +122,12 @@ $(function() {
 });
 
 $(window).on('load', function() {
+	$('iframe#twitter-widget-0').attr('style', 'width: 100%');
 	$('iframe#twitter-widget-0').each(function () {
 		var head = $(this).contents().find('head');
 		console.log(head);
 		if (head.length) {
-			head.append('<style>.timeline { max-width: 100% !important; width: 100% !important; } .timeline .stream { max-width: 100% !important; width: 100% !important; }</style>');
+			head.append('<style>.timeline-Widget { max-width: 100% !important; width: 100% !important; } @media only screen and (max-width: 600px) { .timeline-Widget { max-width: 300px !important; width: 300px !important; } }</style>');
 		}
 	});
 });
